@@ -1,0 +1,126 @@
+{
+    "osztalyok":[
+        {
+            "id": 1,
+            "nev": "Kovács Péter",
+            "szak": "Mérnökinformatika",
+            "Evfolyam": 2
+          },
+          {
+            "id": 2,
+            "nev": "Nagy Anna",
+            "szak": "Gazdálkodási és menedzsment",
+            "Evfolyam": 1
+          },
+          {
+            "id": 3,
+            "nev": "Szabó Gábor",
+            "szak": "Villamosmérnök",
+            "Evfolyam": 3
+          },
+          {
+            "id": 4,
+            "nev": "Tóth Eszter",
+            "szak": "Pszichológia",
+            "Evfolyam": 4
+          },
+          {
+            "id": 5,
+            "nev": "Horváth Bence",
+            "szak": "Gépészmérnök",
+            "Evfolyam": 2
+          },
+          {
+            "id": 6,
+            "nev": "Varga Zsófia",
+            "szak": "Kommunikáció- és médiatudomány",
+            "Evfolyam": 1
+          },
+          {
+            "id": 7,
+            "nev": "Kiss Dániel",
+            "szak": "Mérnökinformatika",
+            "Evfolyam": 3
+          },
+          {
+            "id": 8,
+            "nev": "Molnár Dóra",
+            "szak": "Nemzetközi tanulmányok",
+            "Evfolyam": 2
+          },
+          {
+            "id": 9,
+            "nev": "Farkas Ádám",
+            "szak": "Pénzügy és számvitel",
+            "Evfolyam": 4
+          },
+          {
+            "id": 10,
+            "nev": "Balogh Réka",
+            "szak": "Biológia",
+            "Evfolyam": 1
+          }
+    ],
+    "diakok":[
+        {
+            "id": 1,
+            "nev": "Kovács Péter",
+            "email": "kovacs.peter@example.com",
+            "OsztalyID": 101
+          },
+          {
+            "id": 2,
+            "nev": "Nagy Anna",
+            "email": "nagy.anna@example.com",
+            "OsztalyID": 101
+          },
+          {
+            "id": 3,
+            "nev": "Szabó Gábor",
+            "email": "szabo.gabor@example.com",
+            "OsztalyID": 102
+          },
+          {
+            "id": 4,
+            "nev": "Tóth Eszter",
+            "email": "toth.eszter@example.com",
+            "OsztalyID": 102
+          },
+          {
+            "id": 5,
+            "nev": "Horváth Bence",
+            "email": "horvath.bence@example.com",
+            "OsztalyID": 103
+          },
+          {
+            "id": 6,
+            "nev": "Varga Zsófia",
+            "email": "varga.zsofia@example.com",
+            "OsztalyID": 103
+          },
+          {
+            "id": 7,
+            "nev": "Kiss Dániel",
+            "email": "kiss.daniel@example.com",
+            "OsztalyID": 101
+          },
+          {
+            "id": 8,
+            "nev": "Molnár Dóra",
+            "email": "molnar.dora@example.com",
+            "OsztalyID": 104
+          },
+          {
+            "id": 9,
+            "nev": "Farkas Ádám",
+            "email": "farkas.adam@example.com",
+            "OsztalyID": 104
+          },
+          {
+            "id": 10,
+            "nev": "Balogh Réka",
+            "email": "balogh.reka@example.com",
+            "OsztalyID": 102
+          }
+    ]
+}

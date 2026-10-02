@@ -1,0 +1,16 @@
+create Database diakok_nyilvantartasa
+default character set Utf8
+collate utf8_hungarian_Ci
+
+Create table Osztalyok(
+    id int(11) primary key AUTO_INCREMENT
+    nev varchar(50)
+    szak varchar(100)
+    evfolyam int(5)
+)
+Create table Diakok(
+    id int(11) primary key AUTO_INCREMENT
+    nev varchar(50)
+    email varchar(100)
+    osztalyID int(11)
+)
