@@ -1,34 +1,51 @@
 const express = require("express")
 const fs = require("fs/promises")
-const mysql2 = require("mysql2")
+const mysql2 = require("mysql2/promise")
 const dotenv = require ("dotenv")
 const nodemon = require("nodemon")
 const path = require("path")
 
+
 const app = express()
-const port = 3000
+const env = dotenv.config()
+const port = 3307
+const fajl = path.join(__dirname,'datas.json')
+
+
 app.use(express.json())
 
-const adatok = path.join(__dirname,"datas.json")
-function readJson(filePath){
-    try{
-        const data = fs.readFile(filePath,'utf-8');
-        return JSON.parse(data)
-    }catch(error){
-        if (error.code === 'ENOENT') return []
-        throw error
+app.get('/', (req,res) => {
+    res.json({
+        uzenet: 'Kezdő Iskolai REST API fut',
+        elerheto_vegpontok: [
+            'GET /api/osztalyok',
+            'GET /api/osztalyok/:id',
+            'GET /api/osztalyok/:id/diakok',
+            'GET /api/diakok',
+            'GET /api/diakok/:id',
+            'GET /api/diakok?aktiv=1',
+        ]
+    })
+})
+const dbPool = mysql2.createPool({
+    host: process.env.DB_HOST,      // Adatbázis szerver címe
+    user: process.env.DB_USER,         // Adatbázis felhasználónév
+    password: process.env.DB_PASSWORD, // Adatbázis jelszó
+    database: process.env.DB_NAME, // Adatbázis név
+    port: process.env.DB_PORT,   });
+
+async function getOsztaly(){
+    const data = await fs.readFile(fajl,'utf-8')
+}
+
+app.get('/api/osztalyok', async (req, res) => {
+    try {
+      const osztalyok = await getOsztaly();
+      res.json(osztalyok);
+    } catch (error) {
+      res.status(500).json({ üzenet: 'Hiba a fájl olvasásakor', hiba: error.message });
     }
-}
-
-function writeJson(filePath,data){
-    fs.writeFile(filePath,JSON.stringify(data,null,2),'utf-8')
-}
+  });
 
 
-
-
-
-
-
-
-app.listen({port}, () =>  console.log("Az app a" + {port} + "-on fut"))
+app.listen({port}, () =>  console.log("Az app a 3000-es porton fut"))
