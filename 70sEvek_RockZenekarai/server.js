@@ -31,6 +31,6 @@ app.get('/api/stilusok',(req, res) => {
     })
 })
 
-app.listen(3307, () => {
-    console.log('A szerver fut a 3307-es porton');
+app.listen(8080, () => {
+    console.log(`A szerver fut a 8080-es porton: http://localhost:8080`);
 })
