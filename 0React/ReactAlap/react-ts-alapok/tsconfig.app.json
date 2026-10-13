@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "incremental":true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es2023",
     "lib": ["ES2023", "DOM"],
@@ -19,8 +20,8 @@
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    //"erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "src/App.tsx", "public/main.tsx", "public/Testeles.jsx", "src/Teszteles.tsx"]
 }
